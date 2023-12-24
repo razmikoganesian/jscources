@@ -19,8 +19,10 @@
     </header>
     <main>
       <section class="left">
-        <input type="number" class="guess" />
-        <button class="btn check">Check!</button>
+        <form id="idguess">
+          <input type="number" min="1" max="20" c class="guess" />
+          <button type="submit" class="btn check">Check!</button>
+        </form>
       </section>
       <section class="right">
         <p class="message">Start guessing...</p>

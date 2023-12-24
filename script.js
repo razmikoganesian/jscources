@@ -3,13 +3,14 @@ let score = 20;
 let highScore = 0;
 let secretNumber = Math.trunc(Math.random() * 20) + 1; // generate number from 1 to 20
 
-const check = document.querySelector(".check");
+const check = document.querySelector("#idguess");
 const restart = document.querySelector(".again");
 const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
 
-check.addEventListener("click", function () {
+check.addEventListener("submit", function (event) {
+  event.preventDefault();
   const guessNumber = Number(document.querySelector(".guess").value); // take a value from input field
 
   // when no input number
